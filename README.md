@@ -30,6 +30,10 @@ npm run build
 
 - [frtrriann](https://github.com/frtrriann)
 
+## Contributors
+
+- [rizkyhaksono](https://github.com/rizkyhaksono)
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
