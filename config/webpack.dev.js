@@ -1,15 +1,11 @@
-import { merge } from "webpack-merge";
-
-import common from "./webpack.common.js";
-import paths from "./paths.js";
+import { merge } from "webpack-merge"
+import common from "./webpack.common.js"
+import paths from "./paths.js"
 
 export default merge(common, {
-  // Set the mode to development or production
   mode: "development",
-  // Control how source maps are generated
   devtool: "inline-source-map",
 
-  // Spin up a server for quick development
   devServer: {
     historyApiFallback: true,
     open: true,
@@ -24,12 +20,11 @@ export default merge(common, {
     },
     compress: true,
     hot: true,
-    port: 8080,
+    port: 3001,
   },
 
   module: {
     rules: [
-      // Styles: Inject CSS into the head with source maps
       {
         test: /\.css$/i,
         use: [
@@ -42,4 +37,4 @@ export default merge(common, {
       },
     ],
   },
-});
+})

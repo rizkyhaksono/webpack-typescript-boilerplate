@@ -1,10 +1,9 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { merge } from "webpack-merge";
-import TerserPlugin from "terser-webpack-plugin";
-import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
-
-import paths from "./paths.js";
-import common from "./webpack.common.js";
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import { merge } from "webpack-merge"
+import TerserPlugin from "terser-webpack-plugin"
+import CssMinimizerPlugin from "css-minimizer-webpack-plugin"
+import paths from "./paths.js"
+import common from "./webpack.common.js"
 
 export default merge(common, {
   mode: "production",
@@ -34,7 +33,6 @@ export default merge(common, {
     ],
   },
   plugins: [
-    // Extracts CSS into separate files
     new MiniCssExtractPlugin({
       filename: "styles/[name].[contenthash].css",
       chunkFilename: "[id].css",
@@ -43,11 +41,9 @@ export default merge(common, {
   optimization: {
     minimize: true,
     minimizer: [
-      // Minimize js files
       new TerserPlugin({
         parallel: true,
       }),
-      // Minimize css files
       new CssMinimizerPlugin({
         parallel: true,
         minimizerOptions: {
@@ -69,4 +65,4 @@ export default merge(common, {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
-});
+})

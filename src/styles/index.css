@@ -1,9 +1,7 @@
-@import url("minireset.css");
-@import url("fonts/fonts.css");
-@import url("./colors.css");
+@import url("../fonts/fonts.css");
 
 html {
-  font-family: "Open Sans";
+  font-family: "Times New Roman", Times, serif;
   box-sizing: border-box;
 }
 
@@ -17,10 +15,4 @@ html {
   100% {
     background-position: 0% 50%;
   }
-}
-
-body {
-  background: linear-gradient(230deg, var(--main-bg-color), #26738e);
-  background-size: 400% 400%;
-  animation: BackgroundAnimation 16s ease infinite;
 }

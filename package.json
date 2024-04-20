@@ -1,12 +1,13 @@
 {
   "name": "webpack-typescript-react-boilerplate",
+  "author": "https://github.com/rizkyhaksono",
   "version": "1.0.0",
   "description": "webpack boilerplate with typescript and react",
   "main": "src/index.tsx",
   "type": "module",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "start": "cross-env webpack serve --config config/webpack.dev.js",
+    "build": "cross-env webpack --config config/webpack.prod.js",
     "test": "jest"
   },
   "engines": {
@@ -18,7 +19,6 @@
     "boilerplate",
     "webpack"
   ],
-  "author": "https://github.com/frtrriann",
   "license": "MIT",
   "dependencies": {
     "clsx": "^2.0.0",
@@ -27,7 +27,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.4",
     "@types/react": "^18.2.21",
